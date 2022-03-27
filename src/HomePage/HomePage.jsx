@@ -6,7 +6,7 @@ import { userActions } from '../_actions';
 
 class HomePage extends React.Component {
     componentDidMount() {
-        //this.props.getUsers();
+        this.props.getUsers();
     }
 
     handleDeleteUser(id) {
@@ -14,7 +14,7 @@ class HomePage extends React.Component {
     }
 
     render() {
-       //const { user, users } = this.props;
+       const { user, users } = this.props;
         return (
             <div class="container">
                 <div class="card">
