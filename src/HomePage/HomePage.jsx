@@ -16,30 +16,26 @@ class HomePage extends React.Component {
     render() {
         const { user, users } = this.props;
         return (
-            <div className="col-md-6 col-md-offset-3">
-                <h1>Hi {user.firstName}!</h1>
-                <p>You're logged in with React!!</p>
-                <h3>All registered users:</h3>
-                {users.loading && <em>Loading users...</em>}
-                {users.error && <span className="text-danger">ERROR: {users.error}</span>}
-                {users.items &&
-                    <ul>
-                        {users.items.map((user, index) =>
-                            <li key={user.id}>
-                                {user.firstName + ' ' + user.lastName}
-                                {
-                                    user.deleting ? <em> - Deleting...</em>
-                                    : user.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>
-                                    : <span> - <a onClick={this.handleDeleteUser(user.id)}>Delete</a></span>
-                                }
-                            </li>
-                        )}
-                    </ul>
-                }
-                <p>
-                    <Link to="/login">Logout</Link>
-                </p>
+            <div class="container">
+                <div class="card">
+                    <img src="https://avatars.githubusercontent.com/u/9113159?v=4" alt="avatar" />
+                    <button class="cybr-btn">
+                Agustin Bereciartua<span aria-hidden>_</span>
+                    <span aria-hidden class="cybr-btn__glitch">Agustin Bereciartua</span>
+                    <span aria-hidden class="cybr-btn__tag"></span>
+                </button>
+                    <h3>Software engineer</h3>
+                    <p>Senior software developer</p>
+                    <div class="socialsbut">
+
+                        <a href="https://www.linkedin.com/in/agustin-bereciartua" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/galenzo17" target="_blank" class="btn"><i class="fab fa-github"></i></a>
+
+                    </div>
+                </div>
+                
             </div>
+
         );
     }
 }
