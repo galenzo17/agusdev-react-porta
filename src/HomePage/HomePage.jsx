@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+import { Draggable } from 'drag-react';
 import { userActions } from '../_actions';
 
 class HomePage extends React.Component {
@@ -16,6 +16,7 @@ class HomePage extends React.Component {
     render() {
        const { user, users } = this.props;
         return (
+                <Draggable>
             <div class="container">
                 <div class="card">
                     <img src="https://avatars.githubusercontent.com/u/9113159?v=4" alt="avatar" />
@@ -33,8 +34,8 @@ class HomePage extends React.Component {
 
                     </div>
                 </div>
-
             </div>
+                </Draggable>
 
         );
     }
