@@ -20,11 +20,11 @@ class HomePage extends React.Component {
                 <div class="card">
                     <img src="https://avatars.githubusercontent.com/u/9113159?v=4" alt="avatar" />
                     <button class="cybr-btn">
-                        Agustin Bereciartua<span aria-hidden>_</span>
-                        <span aria-hidden class="cybr-btn__glitch">Agustin Bereciartua</span>
+                        Agustin Bereciartua Castillo<span aria-hidden>_</span>
+                        <span aria-hidden class="cybr-btn__glitch">Agustin Bereciartua Castillo</span>
                         <span aria-hidden class="cybr-btn__tag"></span>
                     </button>
-                    <h3>Software engineer</h3>
+                    <h3>Agnostic</h3>
                     <p>Senior software developer.</p>
                     <div class="socialsbut">
 
