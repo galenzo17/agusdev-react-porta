@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Draggable } from 'drag-react';
 import { userActions } from '../_actions';
 import styled from "styled-components";
 class HomePage extends React.Component {
@@ -29,7 +28,7 @@ class HomePage extends React.Component {
         return (
 
             <div class="container">
-                {/* <Draggable> */}
+
                     <div class="card">
                         <img src="https://avatars.githubusercontent.com/u/9113159?v=4" alt="avatar" />
                         <button class="cybr-btn">
@@ -45,7 +44,6 @@ class HomePage extends React.Component {
                             
                         </div>
                     </div>
-                {/* </Draggable> */}
                 
             </div>
 
