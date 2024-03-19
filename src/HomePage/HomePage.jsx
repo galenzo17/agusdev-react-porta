@@ -37,7 +37,6 @@ class HomePage extends React.Component {
                             <span aria-hidden class="cybr-btn__glitch">Agustin Bereciartua Castillo</span>
                             <span aria-hidden class="cybr-btn__tag"></span>
                         </button>
-                        <h3>Agnostic</h3>
                         <p>Senior software developer.</p>
                         <div class="socialsbut">
 
