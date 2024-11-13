@@ -1,25 +1,34 @@
-import { createContextId, component$, Slot, useContextProvider, useStore, $, useVisibleTask$ } from '@builder.io/qwik';
+import {
+  createContextId,
+  component$,
+  Slot,
+  useContextProvider,
+  useStore,
+  $,
+  useVisibleTask$,
+} from "@builder.io/qwik";
 
-export type Language = 'en' | 'es';
+export type Language = "en" | "es";
 
 export interface LanguageStore {
   current: Language;
+  toggle: () => void;
 }
 
-export const LanguageContext = createContextId<LanguageStore>('language-context');
+export const LanguageContext =
+  createContextId<LanguageStore>("language-context");
 
 export const LanguageProvider = component$(() => {
   const store = useStore<LanguageStore>({
-    current: 'en'
-  });
-
-  const toggle$ = $(() => {
-    store.current = store.current === 'en' ? 'es' : 'en';
+    current: "en",
+    toggle: $(() => {
+      store.current = store.current === "en" ? "es" : "en";
+    }),
   });
 
   // Set initial language based on browser preference
   useVisibleTask$(() => {
-    store.current = navigator.language.startsWith('es') ? 'es' : 'en';
+    store.current = navigator.language.startsWith("es") ? "es" : "en";
   });
 
   useContextProvider(LanguageContext, store);
@@ -28,10 +37,10 @@ export const LanguageProvider = component$(() => {
     <>
       <div class="fixed top-4 right-4">
         <button
-          onClick$={toggle$}
+          onClick$={store.toggle}
           class="px-4 py-2 bg-gray-800/80 rounded-full hover:bg-purple-500/20 transition-all transform hover:scale-110"
         >
-          {store.current === 'en' ? '🇪🇸 ES' : '🇬🇧 EN'}
+          {store.current === "en" ? "🇪🇸 ES" : "🇬🇧 EN"}
         </button>
       </div>
       <Slot />
