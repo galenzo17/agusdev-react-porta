@@ -15,7 +15,7 @@ const getExperiences = (lang: 'en' | 'es'): Experience[] => [
   {
     company: 'Buk',
     url: 'https://buk.cl/',
-    period: lang === 'en' ? 'May 2022 - Present' : 'Mayo 2022 - Actualidad',
+    period: lang === 'en' ? 'May 2022 - Present' : 'Mayo 2022 - Diciembre 2024',
     role: translations[lang].companies.buk.role,
     description: translations[lang].companies.buk.description,
     stack: ['NestJS', 'React', 'Python', 'TypeScript', 'Shinkansen', 'Minka', 'Líquido', 'SFTP', 'Cobre.co']
